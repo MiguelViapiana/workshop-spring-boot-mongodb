@@ -2,14 +2,20 @@ package com.nelioalves.workshopmongo.dto;
 
 import java.io.Serializable;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.nelioalves.workshopmongo.domain.User;
 
 public class UserDTO implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
+	@JsonProperty("id")
 	private String id;
+	
+	@JsonProperty("name")
 	private String name;
+	
+	@JsonProperty("email")
 	private String email;
 	
 	public UserDTO() {
